@@ -4,7 +4,7 @@
     {% if n <= 90 %}{% assign fs = 24 %}
     {% elsif n <= 150 %}{% assign fs = 19 %}
     {% else %}{% assign fs = 16 %}{% endif %}
-    <div style="font-size:{{ fs }}px;line-height:1.25;white-space:pre-line">{{ text | truncate: 230 }}</div>
+    <div class="description" style="font-size:{{ fs }}px;line-height:1.25;white-space:pre-line">{{ text | truncate: 230 }}</div>
   </div>
   <div class="title_bar"><span class="title">LinkedIn Mad Libs</span><span class="instance">linkedinmadlibs.com</span></div>
 </div>
