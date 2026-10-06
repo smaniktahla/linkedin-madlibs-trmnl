@@ -38,6 +38,7 @@ custom_fields:
   - keyname: author_bio
     name: About This Plugin
     field_type: author_bio
+    category: humor,entertainment
     description: A freshly generated, completely unhinged LinkedIn post on your TRMNL every refresh, with a QR code to linkedinmadlibs.com so you can write your own. Posts are built from the same templates and word banks as the site, so new content shows up automatically.
     github_url: https://github.com/smaniktahla/linkedin-madlibs-trmnl
     learn_more_url: https://linkedinmadlibs.com
