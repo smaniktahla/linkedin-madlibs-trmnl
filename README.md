@@ -1,6 +1,6 @@
 # LinkedIn Mad Libs for TRMNL
 
-A fresh, randomly generated LinkedIn post on your [TRMNL](https://trmnl.com) every hour,
+A fresh, randomly generated LinkedIn post on your [TRMNL](https://trmnl.com) every time it refreshes,
 with a QR code to [linkedinmadlibs.com](https://linkedinmadlibs.com) so you can write your own.
 
 Data comes from `https://linkedinmadlibs.com/api/trmnl`, which lives in the
@@ -16,7 +16,7 @@ This repo holds only the TRMNL plugin (a polling private plugin / recipe).
 
 ## Layout
 
-- `src/settings.yml`: polling, hourly refresh, `?max=600` caps post length for the screen.
+- `src/settings.yml`: polling, 30-minute refresh, `?max=600` caps post length for the screen.
 - `src/{full,half_horizontal,half_vertical,quadrant}.liquid`: one per layout. The quadrant has
   no QR code (too small); the others do.
 
