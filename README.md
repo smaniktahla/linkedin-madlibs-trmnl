@@ -26,3 +26,7 @@ The QR code is a static inline SVG of `https://linkedinmadlibs.com`.
 
 `assets/icon.svg` and `assets/icon.png` (512x512), the site mascot in black on white. Re-render the PNG with
 `rsvg-convert -w 512 -h 512 assets/icon.svg -o assets/icon.png`.
+
+## License
+
+MIT. See `LICENSE`.
