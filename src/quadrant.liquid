@@ -1,10 +1,10 @@
 <div class="view">
   <div class="layout layout--col">
     {% assign n = text.size %}
-    {% if n <= 90 %}{% assign size = "small" %}
-    {% elsif n <= 150 %}{% assign size = "xsmall" %}
-    {% else %}{% assign size = "xxsmall" %}{% endif %}
-    <div class="value value--{{ size }}">{{ text | truncate: 230 | newline_to_br }}</div>
+    {% if n <= 90 %}{% assign size = "small" %}{% assign big = "base" %}
+    {% elsif n <= 150 %}{% assign size = "xsmall" %}{% assign big = "small" %}
+    {% else %}{% assign size = "xxsmall" %}{% assign big = "xsmall" %}{% endif %}
+    <div class="value value--{{ size }} lg:value--{{ big }}">{{ text | truncate: 230 | newline_to_br }}</div>
   </div>
   <div class="title_bar"><span class="title">LinkedIn Mad Libs</span><span class="instance">linkedinmadlibs.com</span></div>
 </div>
