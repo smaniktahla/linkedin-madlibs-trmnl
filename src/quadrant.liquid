@@ -1,10 +1,10 @@
-<div class="view">
+<div class="view view--quadrant">
   <div class="layout layout--col">
     {% assign n = text.size %}
-    {% if n <= 90 %}{% assign size = "small" %}
-    {% elsif n <= 150 %}{% assign size = "xsmall" %}
-    {% else %}{% assign size = "xxsmall" %}{% endif %}
-    <div class="value value--{{ size }}">{{ text | truncate: 230 | newline_to_br }}</div>
+    {% if n <= 90 %}{% assign fs = 24 %}
+    {% elsif n <= 150 %}{% assign fs = 19 %}
+    {% else %}{% assign fs = 16 %}{% endif %}
+    <div class="description" style="font-size:{{ fs }}px;line-height:1.25;white-space:pre-line">{{ text | truncate: 230 }}</div>
   </div>
   <div class="title_bar"><span class="title">LinkedIn Mad Libs</span><span class="instance">linkedinmadlibs.com</span></div>
 </div>
