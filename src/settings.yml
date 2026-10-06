@@ -1,0 +1,9 @@
+---
+name: LinkedIn Mad Libs
+strategy: polling
+polling_verb: get
+polling_url: https://linkedinmadlibs.com/api/trmnl?max=600
+polling_headers: ''
+refresh_interval: 60
+no_screen_padding: 'no'
+dark_mode: 'no'
