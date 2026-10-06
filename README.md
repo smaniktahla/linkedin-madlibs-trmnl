@@ -20,7 +20,8 @@ This repo holds only the TRMNL plugin (a polling private plugin / recipe).
 - `src/{full,half_horizontal,half_vertical,quadrant}.liquid`: one per layout. The quadrant has
   no QR code (too small); the others do.
 
-The QR code is a static inline SVG of `https://linkedinmadlibs.com`.
+The QR code is a static SVG of `https://linkedinmadlibs.com`, defined once in `src/shared.liquid` as a
+`qr_code` template and rendered in each layout with `{% render "qr_code", size: N %}`.
 
 ## Icon
 
