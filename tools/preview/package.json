@@ -1,0 +1,9 @@
+{
+  "name": "trmnl-preview",
+  "private": true,
+  "description": "Render the plugin's Liquid layouts against the TRMNL framework in headless Chromium",
+  "dependencies": {
+    "liquidjs": "^10.0.0",
+    "qrcode": "^1.5.0"
+  }
+}
