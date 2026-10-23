@@ -1,11 +1,11 @@
 <div class="layout">
   <div class="grid grid--cols-4">
-    <div class="col--span-3">
+    <div class="col col--span-3">
       {% assign n = text.size %}
-      {% if n <= 150 %}{% assign size = "base" %}{% assign big = "xlarge" %}{% assign c = 8 %}{% assign cbig = 14 %}
-      {% elsif n <= 330 %}{% assign size = "small" %}{% assign big = "large" %}{% assign c = 12 %}{% assign cbig = 18 %}
-      {% elsif n <= 520 %}{% assign size = "xsmall" %}{% assign big = "large" %}{% assign c = 16 %}{% assign cbig = 18 %}
-      {% else %}{% assign size = "xxsmall" %}{% assign big = "base" %}{% assign c = 20 %}{% assign cbig = 28 %}{% endif %}
+      {% if n <= 150 %}{% assign size = "base" %}{% assign big = "large" %}{% assign c = 8 %}{% assign cbig = 9 %}
+      {% elsif n <= 330 %}{% assign size = "small" %}{% assign big = "base" %}{% assign c = 12 %}{% assign cbig = 15 %}
+      {% elsif n <= 520 %}{% assign size = "xsmall" %}{% assign big = "small" %}{% assign c = 16 %}{% assign cbig = 22 %}
+      {% else %}{% assign size = "xxsmall" %}{% assign big = "small" %}{% assign c = 20 %}{% assign cbig = 22 %}{% endif %}
       {% if text %}
         <div class="value value--{{ size }} lg:value--{{ big }}" data-clamp="{{ c }}" data-clamp-lg="{{ cbig }}">{{ text | newline_to_br }}</div>
       {% else %}
@@ -13,9 +13,9 @@
       {% endif %}
       <span class="label text--black hidden lg:visible">Template: {{ template }}</span>
     </div>
-    <div class="col--span-1 text--center">
+    <div class="col col--span-1 col--center text--center">
       <div class="w--full aspect--1/1">{{ "https://linkedinmadlibs.com" | qr_code }}</div>
-      <span class="label text--black">Scan to create your own</span>
+      <div class="description text--black text--center">Scan to create your own</div>
     </div>
   </div>
 </div>

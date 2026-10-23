@@ -1,8 +1,8 @@
 <div class="layout layout--col">
   {% assign n = text.size %}
-  {% if n <= 90 %}{% assign size = "small" %}{% assign big = "large" %}{% assign c = 5 %}{% assign cbig = 8 %}
-  {% elsif n <= 150 %}{% assign size = "xsmall" %}{% assign big = "base" %}{% assign c = 6 %}{% assign cbig = 12 %}
-  {% else %}{% assign size = "xxsmall" %}{% assign big = "small" %}{% assign c = 8 %}{% assign cbig = 18 %}{% endif %}
+  {% if n <= 90 %}{% assign size = "small" %}{% assign big = "base" %}{% assign c = 5 %}{% assign cbig = 7 %}
+  {% elsif n <= 150 %}{% assign size = "xsmall" %}{% assign big = "small" %}{% assign c = 6 %}{% assign cbig = 10 %}
+  {% else %}{% assign size = "xxsmall" %}{% assign big = "xsmall" %}{% assign c = 8 %}{% assign cbig = 12 %}{% endif %}
   {% if text %}
     <div class="value value--{{ size }} lg:value--{{ big }}" data-clamp="{{ c }}" data-clamp-lg="{{ cbig }}">{{ text | newline_to_br }}</div>
   {% else %}
