@@ -1,12 +1,13 @@
 <div class="layout layout--col">
   {% assign n = text.size %}
-  {% if n <= 90 %}{% assign size = "small" %}{% assign big = "base" %}{% assign c = 5 %}{% assign cbig = 7 %}
-  {% elsif n <= 150 %}{% assign size = "xsmall" %}{% assign big = "small" %}{% assign c = 6 %}{% assign cbig = 10 %}
-  {% else %}{% assign size = "xxsmall" %}{% assign big = "xsmall" %}{% assign c = 8 %}{% assign cbig = 12 %}{% endif %}
-  {% if text %}
-    <div class="value value--{{ size }} lg:value--{{ big }}" data-clamp="{{ c }}" data-clamp-lg="{{ cbig }}">{{ text | newline_to_br }}</div>
+  {% if n <= 60 %}{% assign size = "large" %}{% assign big = "xlarge" %}
+  {% else %}{% assign size = "base" %}{% assign big = "large" %}{% endif %}
+  {% if paragraphs.size > 0 %}
+  <div class="content content--{{ size }} lg:content--{{ big }} flex flex--col flex--left gap--xsmall" data-content-limiter="true">
+  {% for p in paragraphs %}<p>{{ p | newline_to_br }}</p>{% endfor %}
+  </div>
   {% else %}
-    <span class="label">No post right now. Check back soon!</span>
+  <span class="label">No post right now. Check back soon!</span>
   {% endif %}
 </div>
 <div class="title_bar"><span class="title">LinkedIn Mad Libs</span><span class="instance">linkedinmadlibs.com</span></div>

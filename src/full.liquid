@@ -2,14 +2,15 @@
   <div class="grid grid--cols-4">
     <div class="col col--span-3">
       {% assign n = text.size %}
-      {% if n <= 150 %}{% assign size = "base" %}{% assign big = "large" %}{% assign c = 8 %}{% assign cbig = 9 %}
-      {% elsif n <= 330 %}{% assign size = "small" %}{% assign big = "base" %}{% assign c = 12 %}{% assign cbig = 15 %}
-      {% elsif n <= 520 %}{% assign size = "xsmall" %}{% assign big = "small" %}{% assign c = 16 %}{% assign cbig = 22 %}
-      {% else %}{% assign size = "xxsmall" %}{% assign big = "small" %}{% assign c = 20 %}{% assign cbig = 22 %}{% endif %}
-      {% if text %}
-        <div class="value value--{{ size }} lg:value--{{ big }}" data-clamp="{{ c }}" data-clamp-lg="{{ cbig }}">{{ text | newline_to_br }}</div>
+      {% if n <= 120 %}{% assign size = "xxlarge" %}{% assign big = "xxxlarge" %}
+      {% elsif n <= 200 %}{% assign size = "xlarge" %}{% assign big = "xxlarge" %}
+      {% else %}{% assign size = "large" %}{% assign big = "xlarge" %}{% endif %}
+      {% if paragraphs.size > 0 %}
+      <div class="content content--{{ size }} lg:content--{{ big }} flex flex--col flex--left gap--xsmall" data-content-limiter="true">
+      {% for p in paragraphs %}<p>{{ p | newline_to_br }}</p>{% endfor %}
+      </div>
       {% else %}
-        <span class="label">No post right now. Check back soon!</span>
+      <span class="label">No post right now. Check back soon!</span>
       {% endif %}
       <span class="label text--black hidden lg:visible">Template: {{ template }}</span>
     </div>
