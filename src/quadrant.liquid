@@ -4,7 +4,7 @@
   {% else %}{% assign size = "base" %}{% assign big = "large" %}{% endif %}
   {% if paragraphs.size > 0 %}
   <div class="content content--{{ size }} lg:content--{{ big }} flex flex--col flex--left gap--xsmall" data-content-limiter="true">
-  {% for p in paragraphs %}<p>{{ p | newline_to_br }}</p>{% endfor %}
+  {% for p in paragraphs limit: 3 %}<p>{{ p | newline_to_br }}</p>{% endfor %}{% if paragraphs.size > 3 %}<p>&hellip;</p>{% endif %}
   </div>
   {% else %}
   <span class="label">No post right now. Check back soon!</span>
