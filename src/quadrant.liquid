@@ -1,10 +1,10 @@
 <div class="layout layout--col">
   {% assign n = text.size %}
-  {% if n <= 90 %}{% assign size = "small" %}{% assign big = "base" %}
-  {% elsif n <= 150 %}{% assign size = "xsmall" %}{% assign big = "small" %}
-  {% else %}{% assign size = "xxsmall" %}{% assign big = "xsmall" %}{% endif %}
+  {% if n <= 90 %}{% assign size = "small" %}{% assign big = "large" %}{% assign c = 5 %}{% assign cbig = 8 %}
+  {% elsif n <= 150 %}{% assign size = "xsmall" %}{% assign big = "base" %}{% assign c = 6 %}{% assign cbig = 12 %}
+  {% else %}{% assign size = "xxsmall" %}{% assign big = "small" %}{% assign c = 8 %}{% assign cbig = 18 %}{% endif %}
   {% if text %}
-    <div class="value value--{{ size }} lg:value--{{ big }}">{{ text | truncate: 230 | newline_to_br }}</div>
+    <div class="value value--{{ size }} lg:value--{{ big }}" data-clamp="{{ c }}" data-clamp-lg="{{ cbig }}">{{ text | newline_to_br }}</div>
   {% else %}
     <span class="label">No post right now. Check back soon!</span>
   {% endif %}

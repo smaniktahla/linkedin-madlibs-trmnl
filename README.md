@@ -20,8 +20,10 @@ This repo holds only the TRMNL plugin (a polling private plugin / recipe).
 - `src/{full,half_horizontal,half_vertical,quadrant}.liquid`: one per layout. The quadrant has
   no QR code (too small); the others do.
 
-The QR code is a static SVG of `https://linkedinmadlibs.com`, defined once in `src/shared.liquid` as a
-`qr_code` template and rendered in each layout with `{% render "qr_code", size: N %}`.
+The QR code uses TRMNL's built-in `qr_code` filter (`{{ "https://linkedinmadlibs.com" | qr_code }}`), which
+fills a square container. Text size steps with post length (`value--*`), has a one-to-two-step larger `lg:`
+variant for TRMNL X, and is limited with `data-clamp` / `data-clamp-lg` instead of truncating. The full layout
+also shows the template name on large screens only (`hidden lg:visible`).
 
 ## Icon
 
