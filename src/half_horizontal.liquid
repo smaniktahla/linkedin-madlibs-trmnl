@@ -1,19 +1,19 @@
 <div class="layout">
   <div class="grid grid--cols-5">
-    <div class="col--span-4">
+    <div class="col col--span-4">
       {% assign n = text.size %}
-      {% if n <= 120 %}{% assign size = "small" %}{% assign big = "large" %}{% assign c = 5 %}{% assign cbig = 9 %}
-      {% elsif n <= 190 %}{% assign size = "xsmall" %}{% assign big = "base" %}{% assign c = 7 %}{% assign cbig = 13 %}
-      {% else %}{% assign size = "xxsmall" %}{% assign big = "small" %}{% assign c = 9 %}{% assign cbig = 20 %}{% endif %}
+      {% if n <= 120 %}{% assign size = "small" %}{% assign big = "base" %}{% assign c = 5 %}{% assign cbig = 6 %}
+      {% elsif n <= 190 %}{% assign size = "xsmall" %}{% assign big = "small" %}{% assign c = 7 %}{% assign cbig = 10 %}
+      {% else %}{% assign size = "xxsmall" %}{% assign big = "xsmall" %}{% assign c = 9 %}{% assign cbig = 12 %}{% endif %}
       {% if text %}
         <div class="value value--{{ size }} lg:value--{{ big }}" data-clamp="{{ c }}" data-clamp-lg="{{ cbig }}">{{ text | newline_to_br }}</div>
       {% else %}
         <span class="label">No post right now. Check back soon!</span>
       {% endif %}
     </div>
-    <div class="col--span-1 text--center">
+    <div class="col col--span-1 col--center text--center">
       <div class="w--full aspect--1/1">{{ "https://linkedinmadlibs.com" | qr_code }}</div>
-      <span class="label text--black">Create your own</span>
+      <div class="description text--black text--center">Create your own</div>
     </div>
   </div>
 </div>
