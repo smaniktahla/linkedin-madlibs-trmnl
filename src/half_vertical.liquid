@@ -1,8 +1,8 @@
 <div class="layout layout--col">
   {% assign n = text.size %}
-  {% if n <= 100 %}{% assign size = "xlarge" %}{% assign big = "xxlarge" %}
-  {% elsif n <= 200 %}{% assign size = "large" %}{% assign big = "xlarge" %}
-  {% else %}{% assign size = "base" %}{% assign big = "large" %}{% endif %}
+  {% if n <= 100 %}{% assign size = "xlarge" %}{% assign big = "xxlarge lg:portrait:content--xxxlarge" %}
+  {% elsif n <= 200 %}{% assign size = "large" %}{% assign big = "xlarge lg:portrait:content--xxlarge" %}
+  {% else %}{% assign size = "base" %}{% assign big = "large lg:portrait:content--xlarge" %}{% endif %}
   {% if paragraphs.size > 0 %}
   <div class="content content--{{ size }} lg:content--{{ big }} flex flex--col flex--left gap--xsmall" data-content-limiter="true">
   {% for p in paragraphs %}<p>{{ p | newline_to_br }}</p>{% endfor %}
