@@ -1,6 +1,6 @@
 <div class="layout layout--col">
   {% assign n = text.size %}
-  {% if n <= 60 %}{% assign size = "xlarge" %}{% assign big = "xxlarge" %}
+  {% if n <= 60 %}{% assign size = "large" %}{% assign big = "xxlarge" %}
   {% else %}{% assign size = "base" %}{% assign big = "large" %}{% endif %}
   {% if paragraphs.size > 0 %}
   <div class="content content--{{ size }} lg:content--{{ big }} flex flex--col flex--left gap--xsmall" data-content-limiter="true">
